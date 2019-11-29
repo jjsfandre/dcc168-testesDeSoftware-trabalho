@@ -14,18 +14,24 @@ public class Game implements Runnable{
 	public static final int width = 800, height = 500;
 	private Thread t;
 	private static boolean running = false;
+	private static boolean canExit;
 	private Tela tela;
 	
 	private StateManager sm;
 	private KeyManager km;
 	
 	public Game() {
+		this(true);
+	}
+	
+	public Game(boolean canExit) {
 		tela = new Tela("Pong Game by Arthur Bockmann Grossi" ,width, height);
 		
 		sm = new StateManager();
 		km = new KeyManager();
 		tela.setKeyListener(km);
 		StateManager.setState(StateManager.MENU);
+		this.canExit = canExit;
 	}
 	
 	
@@ -104,7 +110,8 @@ public class Game implements Runnable{
 
 	public static void stopGame(int code) {
 		Game.running = false;
-		System.exit(code);
+		if (Game.canExit)
+			System.exit(code);
 	}
 	
 	
