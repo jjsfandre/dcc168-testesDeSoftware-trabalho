@@ -108,4 +108,9 @@ public class MenuState implements States {
 
 		}
 	}
+
+	public void setChoice(int choice) {
+		this.choice = choice;
+		
+	}
 }

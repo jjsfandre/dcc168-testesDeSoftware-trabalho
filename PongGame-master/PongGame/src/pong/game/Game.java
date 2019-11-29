@@ -106,4 +106,13 @@ public class Game implements Runnable{
 		Game.running = false;
 		System.exit(code);
 	}
+	
+	
+	public StateManager getStateManager() {
+		return this.sm;
+	}
+	
+	public boolean isRunning() {
+		return running;
+	}
 }
