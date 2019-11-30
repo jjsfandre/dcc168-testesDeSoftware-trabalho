@@ -1,4 +1,4 @@
-package pong.main.tests;
+package pong.states.tests;
 
 import static org.junit.Assert.assertTrue;
 
@@ -16,11 +16,11 @@ import pong.states.StateManager;
 
 @RunWith(Suite.class)
 @SuiteClasses({})
-public class AllTests {
+public class MenuStateTest {
 	
 	private Game game;
 	
-	public AllTests() {
+	public MenuStateTest() {
 
 		game = new Game(false);
 		game.start();
