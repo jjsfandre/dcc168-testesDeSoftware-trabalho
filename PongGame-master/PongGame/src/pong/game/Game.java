@@ -114,9 +114,12 @@ public class Game implements Runnable{
 			System.exit(code);
 	}
 	
-	
+
 	public StateManager getStateManager() {
 		return this.sm;
+	}
+	public KeyManager getKeyManager() {
+		return this.km;
 	}
 	
 	public boolean isRunning() {

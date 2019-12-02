@@ -107,4 +107,14 @@ public class GameState implements States {
 			xVel = (-1)*xVel;
 		}
 	}
+
+	public Player getPlayerA() {
+		return A;
+	}
+	public Player getPlayerB() {
+		return B;
+	}
+	public int getXVel() {
+		return xVel;
+	}
 }

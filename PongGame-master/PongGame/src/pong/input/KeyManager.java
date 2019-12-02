@@ -23,6 +23,14 @@ public class KeyManager implements KeyListener {
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
+		
+		KeyEventMock keyEvent = new KeyEventMock(e.getKeyCode());  
+		keyPressed(keyEvent);
+	}
+	/*
+	 * This is necessary to mock KeyEvent object to use in unit tests
+	 */
+	public void keyPressed(KeyEventMock e) {
 		if(e.getKeyCode() < 0 || e.getKeyCode() > 255)
 			return;
 		
@@ -31,12 +39,21 @@ public class KeyManager implements KeyListener {
 		StateManager.getState().checkKeyPressed(e.getKeyCode());
 	}
 	
+	
 	@Override
 	public void keyReleased(KeyEvent e) {
+		
+		KeyEventMock keyEvent = new KeyEventMock(e.getKeyCode());  
+		keyReleased(keyEvent);
+	}
+	/*
+	 * This is necessary to mock KeyEvent object to use in unit tests
+	 */
+	public void keyReleased(KeyEventMock e) {
 		if(e.getKeyCode() < 0 || e.getKeyCode() > 255)
 			return;
 		
-		keys[e.getKeyCode()] = false;
+		keys[e.getKeyCode()] = false;		
 	}
 		
 	@Override
