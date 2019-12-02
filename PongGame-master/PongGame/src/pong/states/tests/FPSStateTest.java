@@ -8,6 +8,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import pong.game.Game;
+import pong.main.Main;
 import pong.states.FPSState;
 import pong.states.GameState;
 import pong.states.HelpState;
@@ -22,8 +23,10 @@ public class FPSStateTest {
 	
 	public FPSStateTest() {
 
-		game = new Game(false);
-		game.start();
+		String args[] = null;
+		Main main = new Main();
+		main.main(args);
+		game = main.getGame();
 	}
 	
 	@Test 
