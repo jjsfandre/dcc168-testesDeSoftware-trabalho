@@ -27,7 +27,7 @@ public class HelpStateTest {
 	}
 	
 	@Test 
-	void teclasDiversas_nadaAFazer(){
+	void teclasDiversas_retornarAoMenu(){
 		boolean error = false;
 		StateManager sm = game.getStateManager();
 		StateManager.setState(StateManager.HELP);

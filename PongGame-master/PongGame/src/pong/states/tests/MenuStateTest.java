@@ -27,7 +27,7 @@ public class MenuStateTest {
 	}
 
 	@Test 
-	void start_enter_iniciarJogo() {
+	void enter_iniciarJogo() {
 
 		StateManager sm = game.getStateManager();
 		StateManager.setState(StateManager.MENU);
@@ -38,7 +38,7 @@ public class MenuStateTest {
 		assertTrue("Jogo não foi iniciado corretamente",sm.getState() instanceof GameState);
 	}
 	@Test 
-	void start_enter_telaAjuda() {
+	void enter_telaAjuda() {
 		StateManager sm = game.getStateManager();
 		StateManager.setState(StateManager.MENU);
 		MenuState currentState = (MenuState)sm.getState();
@@ -48,7 +48,7 @@ public class MenuStateTest {
 		assertTrue("Tela de ajuda não foi acessada corretamente",sm.getState() instanceof HelpState);
 	}
 	@Test 
-	void start_enter_sairDoJogo() {
+	void enter_sairDoJogo() {
 		StateManager sm = game.getStateManager();
 		StateManager.setState(StateManager.MENU);
 		MenuState currentState = (MenuState)sm.getState();
