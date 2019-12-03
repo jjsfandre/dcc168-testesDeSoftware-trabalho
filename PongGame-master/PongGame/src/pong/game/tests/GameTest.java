@@ -8,12 +8,6 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import pong.game.Game;
-import pong.main.Main;
-import pong.states.FPSState;
-import pong.states.GameState;
-import pong.states.HelpState;
-import pong.states.MenuState;
-import pong.states.StateManager;
 
 @RunWith(Suite.class)
 @SuiteClasses({})
@@ -35,18 +29,6 @@ public class GameTest {
 			e.printStackTrace();
 			error =true;
 		}
-		//StateManager sm = game.getStateManager();
-		/*StateManager sm = game.getStateManager();
-		StateManager.setState(StateManager.FPS);
-		FPSState currentState = (FPSState)sm.getState();
-		for(int tecla = 0; tecla<256;tecla++) {
-			currentState.checkKeyPressed(tecla);
-			if (!(sm.getState() instanceof MenuState)) {
-				error = true;
-				break;
-			}
-			StateManager.setState(StateManager.FPS);
-		}*/
 		assertTrue("Teste de cobertura de teste falhou",!error);
 	}
 	

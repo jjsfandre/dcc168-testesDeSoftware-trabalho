@@ -16,9 +16,7 @@ import pong.elements.Player;
 import pong.game.Game;
 import pong.input.KeyEventMock;
 import pong.input.KeyManager;
-import pong.states.FPSState;
 import pong.states.GameState;
-import pong.states.HelpState;
 import pong.states.MenuState;
 import pong.states.StateManager;
 

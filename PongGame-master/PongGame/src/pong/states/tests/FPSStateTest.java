@@ -10,8 +10,6 @@ import org.junit.runners.Suite.SuiteClasses;
 import pong.game.Game;
 import pong.main.Main;
 import pong.states.FPSState;
-import pong.states.GameState;
-import pong.states.HelpState;
 import pong.states.MenuState;
 import pong.states.StateManager;
 
