@@ -88,7 +88,7 @@ public class GameState implements States {
 		yVel = (r.nextInt(2)==0) ? 4 : -4;
 	}
 
-	private void limits() {
+	public void limits() {
 		if(ball.x < 0) {
 			start();
 			B.incScore();
@@ -116,5 +116,15 @@ public class GameState implements States {
 	}
 	public int getXVel() {
 		return xVel;
+	}
+	public int getYVel() {
+		return yVel;
+	}
+	public Rectangle getBall() {
+		return ball;
+	}
+	
+	public void setXVel(int x) {
+		this.xVel = x;
 	}
 }
